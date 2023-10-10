@@ -1,0 +1,90 @@
+# jeecg-boot/积木报表基于H2驱动的任意代码执行漏洞 (MPS-bjs4-n6dm)
+<figure class="wp-block-table">
+    <table>
+        <tbody>
+        <tr>
+            <td><strong>漏洞类型</strong></td>
+            <td>代码注入</td>
+            <td><strong>发现时间</strong></td>
+            <td>2023-08-11</td>
+            <td><strong>漏洞等级</strong></td>
+            <td>高危</td>
+        </tr>
+        <tr>
+            <td><strong>MPS编号</strong></td>
+            <td><a href="https://www.oscs1024.com/hd/MPS-bjs4-n6dm">MPS-bjs4-n6dm</a></td>
+            <td><strong>CVE编号</strong></td>
+            <td>-</td>
+            <td><strong>漏洞影响广度</strong></td>
+            <td>广</td>
+        </tr>
+        </tbody>
+    </table>
+</figure>
+
+
+<figure class="wp-block-table">
+    <h1 class="wp-block-heading">漏洞危害</h1>
+    <table>
+        <tbody>
+        <tr>
+            <td><strong>OSCS 描述</strong></td>
+        </tr>
+        <tr>
+            <td>JeecgBoot 是一款开源的的低代码开发平台，积木报表是其中的低代码报表组件。
+JeecgBoot 受影响版本中，由于 jeecg-boot/jmreport/testConnection Api接口未进行身份验证，并且未对  dbUrl 参数进行限制，当应用端存在H2数据库驱动依赖时，攻击者发送包含恶意 dbUrl 参数的http请求远程执行任意代码。<br><em>参考链接：<a
+                    href="https://www.oscs1024.com/hd/MPS-bjs4-n6dm">https://www.oscs1024.com/hd/MPS-bjs4-n6dm</a></em>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</figure>
+
+
+<figure class="wp-block-table alignleft">
+    <h1 class="wp-block-heading">影响范围及处置方案</h1>
+    <h2 class="wp-block-heading"><strong>OSCS</strong> <strong>平台影响范围和处置方案</strong></h2>
+    <table>
+        <tbody>
+        <tr>
+            <td>影响范围</td>
+            <td>处置方式</td>
+            <td>处置方法</td>
+        </tr>
+        <tr><td rowspan="1">JeecgBoot [3.0, 3.5.3]</td><td>缓解措施</td><td>避免  jeecg-boot/jmreport/testConnection Api接口直接对外暴露</td></tr>
+        <tr>
+            <td colspan="3"><em>参考链接：</em><em><a
+                    href="https://www.oscs1024.com/hd/MPS-bjs4-n6dm">https://www.oscs1024.com/hd/MPS-bjs4-n6dm</a></em></td>
+        </tr>
+        </tbody>
+    </table>
+</figure>
+
+
+<figure class="wp-block-table">
+    <h1 class="wp-block-heading">排查方式</h1>
+    <table>
+        <tbody>
+        <tr>
+            <td><strong>方式1：使用漏洞检测CLI工具来排查</strong><em>使用文档：<a
+                    href="https://www.murphysec.com/docs/faqs/integration/cli.html">https://www.murphysec.com/docs/faqs/integration/cli.html</a></em>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>方式2：使用漏洞检测IDEA插件排查</strong><em>使用文档：<a
+                    href="https://www.murphysec.com/docs/faqs/integration/jetbrains-ide-plugin.html">https://www.murphysec.com/docs/faqs/integration/jetbrains-ide-plugin.html</a></em>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>方式3：接入GitLab进行漏洞检测排查</strong><em>使用文档：<a
+                    href="https://www.murphysec.com/docs/faqs/integration/gitlab.html">https://www.murphysec.com/docs/faqs/integration/gitlab.html</a></em>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>更多排查方式：</strong><em><a
+                    href="https://www.murphysec.com/docs/faqs/integration/">https://www.murphysec.com/docs/faqs/integration/</a></em>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</figure>
